@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <script src="/js/equipamento.js"></script>-->
+    <title>Cadastro de equipamentos</title>
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <<div>
+        <h1>Cadastro de equipamentos</h1>
+        <h4>Digite a nome do equipamento a ser cadastrado e observações pertinentes a ele.</h4>
+    </div>
+
+    <div>
+        <form class="novo-form" action="@{/equipamento/create" method="post">
+            <label for="equipo-descricao">Descrição:</label>
+            <input type="text" id="equipo-descricao" name="equipo-descricao" placeholder="Insira uma descrição."><br>
+
+            <label for="equipo-observacao">Observação:</label>
+            <input type="text" id="equipo-observacao" name="equipo-observacao" placeholder="Insira uma observação."><br>
+
+            <input type="submit" value="Salvar">
+        </form>
+    </div>
+
+</body>
+</html>
+
+<!--<form class="novo-form" action="/equipamentos/save" method="post">-->
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <td><input type="submit" value="Salvar"></td>-->
+<!--        </tr>-->
+<!--        </tbody></table>-->
+
+<!--</form>-->

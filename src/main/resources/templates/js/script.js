@@ -21,7 +21,7 @@ function salvar() {
 
 function limpar() {
     InputDescricao.value = "",
-        InputObservacao.value = ""
+    InputObservacao.value = ""
 }
 
 formulario.addEventListener('submit', function(event) {

@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value="/equipamento")
+@CrossOrigin("*")
 public class EquipamentoController {
     @Autowired
     private EquipamentoService equipamentoService;

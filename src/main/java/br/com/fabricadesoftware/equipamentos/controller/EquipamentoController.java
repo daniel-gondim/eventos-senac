@@ -8,26 +8,25 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value="/equipamento")
 @CrossOrigin("*")
 public class EquipamentoController {
     @Autowired
     private EquipamentoService equipamentoService;
 
-    @GetMapping("/todos")
+    @GetMapping("/equipamentos")
     public List<Equipamento> findAllEquipamentos() {
         return equipamentoService.findEquipamento();
     }
 
-    @PostMapping("/create")
+    @PostMapping("/equipamentos/create")
     public Equipamento createEquipamento(@RequestBody Equipamento equipamento){
         return equipamentoService.createEquipamento(equipamento);
     }
-    @DeleteMapping("/delete/id/{id}")
+    @DeleteMapping("/equipamentos/delete/id/{id}")
     public void deleteEquipamento(@PathVariable int id) {
         equipamentoService.deleteEquipamento(id);
     }
-    @PutMapping("/update")
+    @PutMapping("/equipamentos/update")
     public void updateEquipamento(@RequestBody Equipamento equipamento) {
         equipamentoService.updateEquipamento(equipamento);
     }

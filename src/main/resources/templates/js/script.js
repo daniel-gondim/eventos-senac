@@ -3,7 +3,7 @@ const InputDescricao = document.querySelector(".equipo-descricao");
 const InputObservacao = document.querySelector(".equipo-observacao");
 
 function salvar() {
-    fetch("http://localhost:8080/equipamento/create",
+    fetch("http://localhost:8080/equipamentos/create",
         {
             headers: {
                 'Accept': 'application/json',
@@ -17,7 +17,9 @@ function salvar() {
         })
         .then(function (res) {console.log(res) })
         .catch(function (res) {console.log(res) })
-};
+        // window.location.replace("http://localhost:8080/equipamentos");
+        window.location.replace("../templates/equipamentos.html");
+}
 
 function limpar() {
     InputDescricao.value = "",

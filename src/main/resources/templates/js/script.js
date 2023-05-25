@@ -28,7 +28,7 @@ function salvar() {
         })
         .catch(function (res) {
             console.log("Erro na requisição:", res);
-//            console.log(res)  })
+            console.log(res)
         });
 };
 function limpar() {

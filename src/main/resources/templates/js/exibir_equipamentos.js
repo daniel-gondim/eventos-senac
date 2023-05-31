@@ -16,11 +16,11 @@ fetch('http://localhost:8080/equipamentos') // substitua com a URL da sua API
             editButton.textContent = 'Editar';
             listEquipo.appendChild(editButton);
 
-            let isEditMode = false; // variável para controlar o modo de edição
+            let isEditMode = false; //variável para controlar o modo de edição
+            let inputEquipoDescricao;
+            let inputEquipoObservacao;
 
             editButton.addEventListener('click', () => {
-                // const inputEquipoDescricao = document.createElement('input');
-                // const inputEquipoObservacao = document.createElement('input');
                 if (isEditMode) {
                     if (inputEquipoDescricao.value !== equipo.descricao || inputEquipoObservacao.value !== equipo.observacao) {
                         const updateEquipo = {
@@ -43,16 +43,16 @@ fetch('http://localhost:8080/equipamentos') // substitua com a URL da sua API
                                 console.error("Ocorreu um erro ao salvar as alterações.", error);
                             });
                     }
-                    // Atualiza a exibição
+                    // Atualiza a exibição erro esta aqui, falta o .value de input EquipoObservação
                     listEquipo.textContent = `${inputEquipoDescricao.value} - ${inputEquipoObservacao}`;
                     editButton.textContent = 'Editar';
                 } else {
                     // Habilitar o modo de edição
-                    const inputEquipoDescricao = document.createElement('input');
+                    inputEquipoDescricao = document.createElement('input');
                     inputEquipoDescricao.value = equipo.descricao;
                     listEquipo.insertBefore(inputEquipoDescricao, editButton);
 
-                    const inputEquipoObservacao = document.createElement('input');
+                    inputEquipoObservacao = document.createElement('input');
                     inputEquipoObservacao.value = equipo.observacao;
                     listEquipo.insertBefore(inputEquipoObservacao, editButton);
 

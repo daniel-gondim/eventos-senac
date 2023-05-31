@@ -17,12 +17,34 @@ fetch('http://localhost:8080/equipamentos') // substitua com a URL da sua API
             listEquipo.appendChild(editButton);
 
             let isEditMode = false; // variável para controlar o modo de edição
+
             editButton.addEventListener('click', () => {
+                // const inputEquipoDescricao = document.createElement('input');
+                // const inputEquipoObservacao = document.createElement('input');
                 if (isEditMode) {
-                    // Salvar as alterações
-                    equipo.descricao = inputEquipoDescricao.value;
-                    equipo.observacao = inputEquipoObservacao.value;
-                    listEquipo.textContent = `${equipo.descricao} - ${equipo.observacao}`;
+                    if (inputEquipoDescricao.value !== equipo.descricao || inputEquipoObservacao.value !== equipo.observacao) {
+                        const updateEquipo = {
+                            descricao: inputEquipoDescricao.value,
+                            observacao: inputEquipoObservacao.value
+                        };
+
+                        fetch(`http://localhost:8080/equipamentos/update/${equipo.id}`, {
+                            method: 'PUT',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(updateEquipo)
+                        })
+                            .then(response => response.json())
+                            .then(data => {
+                                console.log("Alterações salvas", data);
+                            })
+                            .catch(error => {
+                                console.error("Ocorreu um erro ao salvar as alterações.", error);
+                            });
+                    }
+                    // Atualiza a exibição
+                    listEquipo.textContent = `${inputEquipoDescricao.value} - ${inputEquipoObservacao}`;
                     editButton.textContent = 'Editar';
                 } else {
                     // Habilitar o modo de edição
@@ -36,12 +58,8 @@ fetch('http://localhost:8080/equipamentos') // substitua com a URL da sua API
 
                     editButton.textContent = 'Salvar';
                 }
-
                 isEditMode = !isEditMode; // Alternar o modo de edição
             });
-            listEquipo.textContent = equipoInfo; // atribui à variável o conteúdo de texto de equipoInfo
-
-            // atribui à variável o conteúdo de texto de equipoInfor
             lista.appendChild(listEquipo);
         });
     })

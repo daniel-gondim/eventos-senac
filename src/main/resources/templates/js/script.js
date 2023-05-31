@@ -1,4 +1,3 @@
-const itens = [];
 const formulario = document.getElementById("novo-form");
 const InputDescricao = document.querySelector(".equipo-descricao");
 const InputObservacao = document.querySelector(".equipo-observacao");
@@ -30,7 +29,7 @@ function salvar() {
             console.log("Erro na requisição:", res);
             console.log(res)
         });
-};
+}
 function limpar() {
     InputDescricao.value = "",
         InputObservacao.value = ""
@@ -39,5 +38,4 @@ formulario.addEventListener('submit', function(event) {
     event.preventDefault()
     salvar()
     limpar();
-    mostraLista();
 });

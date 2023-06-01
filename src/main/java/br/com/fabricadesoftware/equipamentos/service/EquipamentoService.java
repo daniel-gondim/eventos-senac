@@ -13,7 +13,6 @@ public class EquipamentoService {
     /**
      * Método responsável por adicionar um equipamento na lista
      */
-
     public Equipamento createEquipamento(Equipamento equipamento) {
         objeto.add(equipamento);
         return objeto.get(0);

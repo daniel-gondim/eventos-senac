@@ -1,7 +1,6 @@
 package br.com.fabricadesoftware.equipamentos.service;
 
 import br.com.fabricadesoftware.equipamentos.entity.Colaborador;
-import br.com.fabricadesoftware.equipamentos.entity.Equipamento;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

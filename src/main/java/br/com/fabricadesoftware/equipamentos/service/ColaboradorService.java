@@ -2,10 +2,12 @@ package br.com.fabricadesoftware.equipamentos.service;
 
 import br.com.fabricadesoftware.equipamentos.entity.Colaborador;
 import br.com.fabricadesoftware.equipamentos.entity.Equipamento;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class ColaboradorService {
     // cria um arrayList para armazenar os colaboradores
     List<Colaborador> colaboradores = new ArrayList<>();

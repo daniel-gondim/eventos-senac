@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Colaborador</title>
+    <script src="./js/script_colaboradores.js.js" defer></script>
+    <link rel="stylesheet" href="./css/styleColaborador.css">
+
 </head>
 <body>
+<div>
+    <h1>Cadastro de colaborador</h1>
+    <h4>Digite o nome do colaborador e a função que ele desempenha no Senac.</h4>
+</div>
 
+<div>
+    <form id="novo-form">
+        <label for="colaborador-nome">Nome:</label>
+        <input type="text" class="colaborador-nome" id="colaborador-nome" name="colaborador-descricao"
+               placeholder="Insira uma nome."><br>
+
+        <label for="colaborador-tipo">Tipo:</label>
+        <input type="text" class="colaborador-tipo" id="colaborador-tipo" name="colaborador-tipo"
+               placeholder="Insira o tipo do colaborador."><br>
+
+        <input type="submit" value="Salvar">
+    </form>
+</div>
 </body>
 </html>

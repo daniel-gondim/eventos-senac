@@ -18,6 +18,7 @@ public class LocalService {
         objeto.add(local);
         return objeto.get(0);
     }
+
     /**
      * Método responsável por criar uma lista de locais na lista
      */

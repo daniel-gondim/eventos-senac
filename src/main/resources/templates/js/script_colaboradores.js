@@ -1,9 +1,9 @@
 const formulario = document.getElementById("novo-form");
-const InputNome = document.querySelector(".local-nome");
-const InputObservacao = document.querySelector(".local-observacao");
+const InputNome = document.querySelector(".colaborador-nome");
+const InputTipo = document.querySelector(".colaborador-tipo");
 
 function salvar() {
-    fetch("http://localhost:8080/locais/create",
+    fetch("http://localhost:8080/colaboradores/create",
         {
             headers: {
                 'Accept': 'application/json',
@@ -12,16 +12,17 @@ function salvar() {
             method: "POST",
             body: JSON.stringify({
                 nome: InputNome.value,
-                observacao: InputObservacao.value
+                tipo: InputTipo.value
             })
         })
         .then(function (res) {
             if (res.ok) {
                 console.log(res)
-                window.location.replace("http://localhost:8080/locais")
-                window.location.href = "../../../../../../senac (1)/equipamentos/src/main/resources/templates/exibir_locais.html";
+                window.location.replace("http://localhost:8080/colaboradores")
+                window.location.href = "../exibir_colaboradores.html";
+                //window.location.replace("../templates/exibir_equipamentos.html");
             } else {
-                console.log("Erro ao salvar o local");
+                console.log("Erro ao salvar o equipamento");
             }
         })
         .catch(function (res) {
@@ -31,7 +32,7 @@ function salvar() {
 }
 function limpar() {
     InputNome.value = "",
-    InputObservacao.value = ""
+    InputTipo.value = ""
 }
 formulario.addEventListener('submit', function(event) {
     event.preventDefault()

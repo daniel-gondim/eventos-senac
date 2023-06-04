@@ -1,6 +1,5 @@
 package br.com.fabricadesoftware.equipamentos.controller;
 
-import br.com.fabricadesoftware.equipamentos.entity.Equipamento;
 import br.com.fabricadesoftware.equipamentos.entity.Local;
 import br.com.fabricadesoftware.equipamentos.service.LocalService;
 import org.springframework.beans.factory.annotation.Autowired;

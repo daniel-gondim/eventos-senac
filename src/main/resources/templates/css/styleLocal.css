@@ -1,0 +1,116 @@
+:root {
+    --branco: #FFFFFF;
+    --laranja: #f78b1f;
+    --preto: #000000;
+    --azul: #007bff;
+}
+
+body {
+    background-image: url("../img/fundoFabrica.jpg") !important;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar-dark {
+    background-color: transparent !important;
+}
+
+.nav-link {
+    color: var(--branco);
+}
+
+.material-symbols-outlined {
+    cursor: pointer;
+}
+
+.col {
+    margin-top: 1em !important;
+    margin-left: 0.5em;
+}
+
+.col h1 {
+    font-size: 2em !important;
+    color: var(--branco);
+}
+
+.col h4 {
+    color: var(--branco);
+}
+
+#novo-form {
+    padding-left: 15px;
+    width: max-content;
+    margin-left: 0.5em;
+}
+
+label {
+    color: var(--branco);
+}
+
+.form-descricao {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+
+#local-nome {
+    width: 15em;
+    height: 2.5em;
+}
+
+.form-observacao {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}
+
+#local-observacao {
+    width: 15em;
+    height: 2.5em;
+}
+
+.btn-primary {
+    width: 15em;
+    height: 3em;
+    background-color: var(--laranja);
+    border-color: var(--laranja);
+}
+
+.visualizar-locais {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5em;
+    margin-top: 2em;
+    width: 15em;
+    gap: 1em;
+    align-items: center;
+    text-align: center;
+}
+
+.visualizar-locais__titulo {
+    font-size: 1em;
+    color: var(--branco);
+}
+
+.segundo-botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10em;
+    height: 2.5em;
+}
+
+@media screen and (max-width: 450px) {
+    .col {
+        margin-top: 2em !important;
+    }
+    
+    .col h1 {
+        font-size: 1.75em !important;
+    }
+    
+    .col h4 {
+        font-size: 1em;
+    } 
+}

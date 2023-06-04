@@ -1,0 +1,236 @@
+:root {
+    --branco: #FFFFFF;
+    --laranja: #f78b1f;
+    --preto: #000000;
+    --azul: #007bff;
+    --azul-escuro: #0e233e;
+}
+
+body {
+    background-image: url("../img/fundoFabrica.jpg") !important;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar-dark {
+    background-color: transparent !important;
+}
+
+.nav-link {
+    color: var(--branco);
+}
+
+.material-symbols-outlined {
+    cursor: pointer;
+}
+
+.col {
+    margin-top: 1em !important;
+    margin-left: 0.5em;
+}
+
+.col h1 {
+    font-size: 2em !important;
+    color: var(--branco);
+}
+
+.col h4 {
+    color: var(--branco);
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin-top: 1em;
+    margin-left: 1.5em;
+    background-color: var(--azul-escuro);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+#form-container label {
+    color: var(--branco);
+}
+
+.btn-primary {
+    width: 15em;
+    height: 3em;
+    background-color: var(--laranja);
+    border-color: var(--laranja);
+}
+
+#titulo {
+    width: 29.7em;
+}
+
+.titulo {
+    gap: 0.5em;
+}
+
+#dataInicio {
+    width: 26.1em;
+}
+
+.dataInicio {
+    gap: 0.5em;
+}
+
+#dataTermino {
+    width: 25em;
+}
+
+.dataTermino {
+    gap: 0.5em;
+}
+
+#observacao {
+    width: 27em;
+}
+
+.observacao {
+    gap: 0.5em;
+}
+
+.colaboradores-dropdown {
+    display: flex;
+    gap: 0.5em;
+}
+
+#colaborador {
+    width: 26.5em;
+}
+
+.locais-dropdown {
+    display: flex;
+    gap: 0.5em;
+}
+
+#local {
+    width: 29.7em;
+}
+
+.equipamentos-dropdown {
+    display: flex;
+    gap: 0.5em;
+}
+
+#equipamento {
+    width: 30em;
+}
+
+.equipamento-select {
+    width: 16.5em;
+}
+
+.btn-primary {
+    width: 32.5em;
+}
+
+label {
+    margin-bottom: 0.2em;
+}
+
+input {
+    margin-bottom: 1em;
+}
+
+select {
+    height: 2em;
+    margin-bottom: 1em;
+}
+
+.equipamento-select {
+    display: block;
+}
+
+@media screen and (max-width: 564px) {
+    .col h4 {
+        font-size: 16px;
+    }
+
+    #titulo {
+        width: 20em;
+    }
+
+    .titulo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #dataInicio {
+        width: 20em;
+    }
+
+    .dataInicio {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #dataTermino {
+        width: 20em;
+    }
+
+    .dataTermino {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #observacao {
+        width: 20em;
+    }
+
+    .observacao {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .colaboradores-dropdown {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #colaborador {
+        width: 20em;
+    }
+
+    .locais-dropdown {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #local {
+        width: 20em;
+    }
+
+    .equipamentos-dropdown {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #equipamento {
+        width: 20em;
+    }
+
+    .btn-primary {
+        width: 20em;
+    }
+
+    label {
+        margin-bottom: 0.2em;
+    }
+
+    input {
+        margin-bottom: 1em;
+    }
+
+    select {
+        height: 2em;
+        margin-bottom: 1em;
+    }
+
+    .equipamento-select {
+        margin-bottom: 1.5em;
+        width: auto;
+    }
+}

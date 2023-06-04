@@ -1,0 +1,42 @@
+:root {
+    --branco: #FFFFFF;
+    --laranja: #f78b1f;
+    --preto: #000000;
+    --azul: #007bff;
+}
+
+body {
+    background-image: url(../img/fundoFabrica.jpg) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.col {
+    margin-top: 10em !important;
+    width: max-content;
+    margin-left: 0.5em;
+}
+
+.col img {
+    width: 6em;
+}
+
+.col h1 {
+    font-size: 3em !important;
+    color: var(--branco);
+}
+
+.col p {
+    font-size: 1.3em;
+    color: var(--branco);
+}
+
+.text-truncate {
+    white-space: normal;
+}
+
+.btn-primary {
+    background-color: var(--laranja);
+    border-color: var(--laranja);
+}

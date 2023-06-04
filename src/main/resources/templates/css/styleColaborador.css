@@ -1,0 +1,77 @@
+:root {
+    --branco: #FFFFFF;
+    --laranja: #f78b1f;
+    --preto: #000000;
+    --azul: #007bff;
+}
+
+body {
+    background-image: url("../img/fundoFabrica.jpg") !important;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar-dark {
+    background-color: transparent !important;
+}
+
+.nav-link {
+    color: var(--branco);
+}
+
+.material-symbols-outlined {
+    cursor: pointer;
+}
+
+.col {
+    margin-top: 1em !important;
+    margin-left: 0.5em;
+}
+
+.col h1 {
+    font-size: 2em !important;
+    color: var(--branco);
+}
+
+h4 {
+    color: var(--branco);
+}
+
+#form-container {
+    padding-left: 15px;
+    width: max-content;
+    margin-left: 0.5em;
+}
+
+label {
+    color: var(--branco);
+}
+
+.form-coordenador {
+    margin-top: 1em;
+}
+
+.nome-colaborador {
+    margin-bottom: 1.5em;
+}
+
+.btn-primary {
+    width: 15em;
+    height: 3em;
+    background-color: var(--laranja);
+    border-color: var(--laranja);
+}
+
+@media screen and (max-width: 450px) {
+    .col {
+        margin-top: 2em !important;
+    }
+    
+    .col h1 {
+        font-size: 1.75em !important;
+    }
+    
+    .col h4 {
+        font-size: 1em;
+    } 
+}

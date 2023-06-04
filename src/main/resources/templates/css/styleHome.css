@@ -1,0 +1,51 @@
+:root {
+    --branco: #FFFFFF;
+    --laranja: #f78b1f;
+    --preto: #000000;
+    --azul: #007bff;
+    --azul-escuro: #0e233e;
+    --cinza: #eff0eb;
+}
+
+body {
+    background-image: url("../img/fundoFabrica.jpg") !important;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar-dark {
+    background-color: transparent !important;
+}
+
+.nav-link {
+    color: var(--branco) ;
+}
+
+.material-symbols-outlined {
+    cursor: pointer;
+}
+
+.col {
+    margin-top: 1em !important;
+    margin-left: 0.5em;
+}
+
+.col h1 {
+    font-size: 2em !important;
+    color: var(--branco);
+}
+
+.novo-form {
+    background-color: var(--cinza);
+    width: 35em;
+    margin-top: 0.5em;
+    margin-left: 1.3em;
+    padding: 0.8em;
+    border-radius: 1em;
+}
+
+@media screen and (max-width: 570px) {
+    .novo-form {
+        width: 20em;
+    }
+}

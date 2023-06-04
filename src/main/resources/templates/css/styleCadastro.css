@@ -1,0 +1,133 @@
+:root {
+    --branco: #FFFFFF;
+    --laranja: #f78b1f;
+    --preto: #000000;
+    --azul: #007bff;
+}
+
+body {
+    background-image: url("../img/fundoFabrica.jpg") !important;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.col {
+    margin-top: 3em !important;
+    margin-left: 0.5em;
+}
+
+.col h1 {
+    font-size: 2em !important;
+    color: var(--branco);
+}
+
+.col p {
+    font-size: 1.2em;
+    color: var(--branco);
+}
+
+.text-truncate {
+    white-space: normal;
+}
+
+#form-container {
+    padding-left: 15px;
+    width: 16em;
+    margin-left: 0.5em;
+}
+
+#form-container label {
+    margin-bottom: 0em;
+}
+
+#nome-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}
+
+#nome-container label {
+    color: var(--branco);
+}
+
+#nome {
+    width: 15em;
+    height: 2.5em;
+}
+
+#username-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}
+
+#username-container label {
+    color: var(--branco);
+}
+
+#username {
+    width: 15em;
+    height: 2.5em;
+}
+
+#password-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}
+
+#password-container label {
+    color: var(--branco);
+}
+
+#password {
+    width: 15em;
+    height: 2.5em;
+}
+
+#telefone-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}
+
+#telefone-container label {
+    color: var(--branco);
+}
+
+#telefone {
+    width: 15em;
+    height: 2.5em;
+}
+
+#colaborador-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}
+
+#colaborador-container label {
+    color: var(--branco);
+}
+
+#colaborador {
+    width: 15em;
+    height: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.btn-primary {
+    width: 15em;
+    height: 3em;
+    background-color: var(--laranja);
+    border-color: var(--laranja);
+    margin-bottom: 0.5em;
+}
+
+.texto__cadastrado-container {
+    display: flex;
+    justify-content: center;
+    color: var(--branco);
+    font-size: 1.2em;
+    font-weight: 600;
+}

@@ -19,7 +19,7 @@ function salvar() {
             if (res.ok) {
                 console.log(res)
                 window.location.replace("http://localhost:8080/equipamentos")
-                window.location.href = "../../../../../../senac (1)/equipamentos/src/main/resources/templates/exibir_equipamentos.html";
+                window.location.href = "../templates/exibir_equipamentos.html";
                 //window.location.replace("../templates/exibir_equipamentos.html");
             } else {
                 console.log("Erro ao salvar o equipamento");

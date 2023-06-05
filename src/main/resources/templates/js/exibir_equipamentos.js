@@ -28,7 +28,7 @@ fetch('http://localhost:8080/equipamentos') // substitua com a URL da sua API
                             observacao: inputEquipoObservacao.value
                         };
 
-                        fetch(`http://localhost:8080/equipamentos/update/${equipo.id}`, {
+                        fetch(`http://localhost:8080/equipamentos/update/id/${equipo.id}`, {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json'

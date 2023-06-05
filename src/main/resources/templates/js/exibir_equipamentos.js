@@ -44,7 +44,7 @@ fetch('http://localhost:8080/equipamentos') // substitua com a URL da sua API
                             });
                     }
                     // Atualiza a exibição erro esta aqui, falta o .value de input EquipoObservação
-                    listEquipo.textContent = `${inputEquipoDescricao.value} - ${inputEquipoObservacao}`;
+                    listEquipo.textContent = `${inputEquipoDescricao.value} - ${inputEquipoObservacao.value}`;
                     editButton.textContent = 'Editar';
                 } else {
                     // Habilitar o modo de edição

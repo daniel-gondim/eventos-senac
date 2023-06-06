@@ -41,10 +41,11 @@ public class EquipamentoService {
      * Método responsável por atualizar informações de um equipamento na lista
      */
     public void updateEquipamento(Equipamento equipamento) {
-        for (Equipamento e : objeto) {
-            if (equipamento.getId() == (e.getId()))
-                deleteEquipamento(equipamento.getId());
-            createEquipamento(equipamento);
+        for (int i = 0; i < objeto.size(); i++) {
+            Equipamento e = objeto.get(i);
+            if (equipamento.getId() == e.getId()) {
+                objeto.set(i, equipamento);
+            }
         }
     }
 }

@@ -3,7 +3,7 @@ const InputDescricao = document.querySelector(".equipo-descricao");
 const InputObservacao = document.querySelector(".equipo-observacao");
 
 function salvar() {
-    fetch("http://localhost:8080/equipamentos/create",
+    fetch("http://localhost:8080/equipamentos",
         {
             headers: {
                 'Accept': 'application/json',

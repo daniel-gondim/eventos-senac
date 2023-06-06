@@ -12,12 +12,10 @@ import java.util.List;
 public class EquipamentoController {
     @Autowired
     private EquipamentoService equipamentoService;
-
     @GetMapping("/equipamentos")
     public List<Equipamento> findAllEquipamentos() {
         return equipamentoService.findEquipamento();
     }
-
     @PostMapping("/equipamentos")
     public Equipamento createEquipamento(@RequestBody Equipamento equipamento){
         return equipamentoService.createEquipamento(equipamento);

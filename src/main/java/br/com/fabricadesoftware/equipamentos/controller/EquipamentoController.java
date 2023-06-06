@@ -18,15 +18,15 @@ public class EquipamentoController {
         return equipamentoService.findEquipamento();
     }
 
-    @PostMapping("/equipamentos/create")
+    @PostMapping("/equipamentos")
     public Equipamento createEquipamento(@RequestBody Equipamento equipamento){
         return equipamentoService.createEquipamento(equipamento);
     }
-    @DeleteMapping("/equipamentos/delete/id/{id}")
+    @DeleteMapping("/equipamentos/{id}")
     public void deleteEquipamento(@PathVariable int id) {
         equipamentoService.deleteEquipamento(id);
     }
-    @PutMapping("/equipamentos/update/id/{id}")
+    @PutMapping("/equipamentos/{id}")
     public void updateEquipamento(@RequestBody Equipamento equipamento) {
         equipamentoService.updateEquipamento(equipamento);
     }

@@ -5,6 +5,10 @@ public class Colaborador {
     private String nome;
     private TipoColaborador tipoColaborador;
 
+    public Colaborador() {
+        
+    }
+
     public Colaborador(Integer id, String nome, TipoColaborador tipoColaborador) {
         this.id = id;
         this.nome = nome;

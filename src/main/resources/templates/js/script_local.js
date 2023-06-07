@@ -19,7 +19,7 @@ function salvar() {
             if (res.ok) {
                 console.log(res)
                 window.location.replace("http://localhost:8080/locais")
-                window.location.href = "../../../../../../senac (1)/equipamentos/src/main/resources/templates/exibir_locais.html";
+                window.location.href = "../templates/exibir_locais.html";
             } else {
                 console.log("Erro ao salvar o local");
             }

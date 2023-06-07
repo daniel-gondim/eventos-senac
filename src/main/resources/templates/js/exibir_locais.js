@@ -9,15 +9,17 @@ fetch('http://localhost:8080/locais') // substitua com a URL da sua API
 
         data.forEach(local => {
             const listLocal = document.createElement('li'); // cria linha para armazenar descrição e observação do equipamento
+            listLocal.className = "lista-locais__item";
             const localInfo = `${local.nome} - ${local.observacao}`; // nome e observação
             listLocal.textContent = localInfo;
 
             const editButton = document.createElement('button');
+            editButton.className = "lista-locais__item__botao";
             editButton.textContent = 'Editar';
             listLocal.appendChild(editButton);
 
             let isEditMode = false; //variável para controlar o modo de edição
-            let inpuLocalNome;
+            let inputLocalNome;
             let inputLocalObservacao;
 
             editButton.addEventListener('click', () => {

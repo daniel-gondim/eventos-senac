@@ -6,6 +6,10 @@ public class Local {
     private String nome;
     private String observacao;
 
+    public Local() {
+        
+    }
+
     public Local(Integer id, String nome, String observacao) {
         this.id = id;
         this.nome = nome;

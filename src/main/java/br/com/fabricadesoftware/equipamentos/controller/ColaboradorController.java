@@ -33,10 +33,4 @@ public class ColaboradorController {
     public void updateColaborador(@RequestBody Colaborador colaborador) {
         colaboradorService.updateColaborador(colaborador);
     }
-
-
-
-
-
-
 }

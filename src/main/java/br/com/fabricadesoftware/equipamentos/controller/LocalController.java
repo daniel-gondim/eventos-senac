@@ -28,8 +28,9 @@ public class LocalController {
         localService.deleteLocal(id);
     }
     @PutMapping("/locais/{id}")
-    public void updateLocais(@RequestBody Local local) {
-        localService.updateLocal(local);
+    // adiciona variável id para atualizar informações dos locais
+    public Local updateLocais(@PathVariable int id, @RequestBody Local local) {
+        return localService.updateLocal(id, local);
     }
 
 }

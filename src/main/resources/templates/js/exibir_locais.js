@@ -39,14 +39,25 @@ fetch('http://localhost:8080/locais') // substitua com a URL da sua API
                         })
                             .then(response => response.json())
                             .then(data => {
-                                console.log("Alterações salvas", data);
+                                if (typeof data === 'object' && data !== null) {
+                                    // Verifica se os campos esperados estão presentes no objeto JSON
+                                    if (data.hasOwnProperty('nome') && data.hasOwnProperty('observacao')) {
+                                        // 'data' contém os dados da resposta da API
+                                        console.log(data); // exibe os dados no console
+                                        console.log("Alterações salvas", data);
+                                    } else {
+                                        console.error('A resposta da API não contem campos esperados')
+                                    }
+                                } else {
+                                    console.error('A resposta da API não é um objeto JSON válido.');
+                                }
                             })
                             .catch(error => {
                                 console.error("Ocorreu um erro ao salvar as alterações.", error);
                             });
                     }
                     // Atualiza a exibição erro esta aqui, falta o .value de input EquipoObservação
-                    listLocal.textContent = `${inputLocalNome.value} - ${inputLocalObservacao}`;
+                    listLocal.textContent = `${inputLocalNome.value} - ${inputLocalObservacao.value}`;
                     editButton.textContent = 'Editar';
                 } else {
                     // Habilitar o modo de edição

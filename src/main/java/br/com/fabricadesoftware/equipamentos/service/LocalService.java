@@ -9,14 +9,13 @@ import java.util.List;
 @Service
 public class LocalService {
     List<Local> listaLocais;
-
     int idAtual;
-
-
     public LocalService() {
         this.listaLocais = new ArrayList<>();
         this.idAtual = 1;
     }
+
+
 
     /**
      * Método responsável por adicionar um local na lista
@@ -50,20 +49,19 @@ public class LocalService {
 
     /**
      * Método responsável por atualizar informações de um equipamento na lista
-     *
      */
     public Local updateLocal(int id, Local local) {
         //para cada objeto local na lista listaLocais
-        for (Local localExistente: listaLocais) {
+        for (Local localExistente : listaLocais) {
             // se o id do objeto local for igual ao id
-            if (localExistente.getId() == id)
-                // atualiza nome
+            if (localExistente.getId() == id) {
                 localExistente.setNome(local.getNome());
                 // atualiza observação
-            localExistente.setObservacao(local.getObservacao());
+                localExistente.setObservacao(local.getObservacao());
                 // devolve objeto atualizado
                 return localExistente;
+            }
         }
-        return local;
+        return null;
     }
 }

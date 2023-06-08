@@ -15,12 +15,9 @@ public class EquipamentoService {
         this.objeto = new ArrayList<>();
         this.idAtual = 1;
     }
-
     /**
      * Método responsável por adicionar um equipamento na lista
      */
-
-
     public Equipamento createEquipamento(Equipamento equipamento) {
         // lógica para setar o id do equipamento criado
         equipamento.setId(this.idAtual);

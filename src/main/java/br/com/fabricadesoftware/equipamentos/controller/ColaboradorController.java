@@ -29,8 +29,8 @@ public class ColaboradorController {
     public void deleteColaborador(@PathVariable int id) {
         colaboradorService.deleteColaborador(id);
     }
-    @PutMapping("/colaboradores/update")
-    public void updateColaborador(@RequestBody Colaborador colaborador) {
-        colaboradorService.updateColaborador(colaborador);
+    @PutMapping("/colaboradores/{id}")
+    public Colaborador updateColaborador(@PathVariable int id, @RequestBody Colaborador colaborador) {
+        return colaboradorService.updateColaborador(id, colaborador);
     }
 }

@@ -30,7 +30,7 @@ fetch('http://localhost:8080/colaboradores') // substitua com a URL da sua API
                             tipo: inputColaboradorTipo.value
                         };
 
-                        fetch(`http://localhost:8080/colaboradores/update/${colaborador.id}`, {
+                        fetch(`http://localhost:8080/colaboradores/${colaborador.id}`, {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json'
@@ -39,7 +39,17 @@ fetch('http://localhost:8080/colaboradores') // substitua com a URL da sua API
                         })
                             .then(response => response.json())
                             .then(data => {
-                                console.log("Alterações salvas", data);
+                                if (typeof data === 'object' && data !== null) {
+                                    // Verifica se os campos esperados estão presentes no objeto JSON
+                                    if (data.hasOwnProperty('nome') && data.hasOwnProperty('tipo')) {
+                                        // 'data' contém os dados da resposta da API
+                                        console.log("Alterações salvas", data);
+                                    } else {
+                                        console.error('A resposta da API não contem campos esperados')
+                                    }
+                                } else {
+                                    console.error('A resposta da API não é um objeto JSON válido.');
+                                }
                             })
                             .catch(error => {
                                 console.error("Ocorreu um erro ao salvar as alterações.", error);

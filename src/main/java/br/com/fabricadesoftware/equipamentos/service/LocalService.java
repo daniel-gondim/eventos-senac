@@ -9,14 +9,25 @@ import java.util.List;
 
 @Service
 public class LocalService {
-    List<Local> objeto = new ArrayList<>();
+    List<Local> objeto;
+
+    int idAtual;
+
+
+    public LocalService() {
+        this.objeto = new ArrayList<>();
+        this.idAtual = 1;
+    }
 
     /**
      * Método responsável por adicionar um local na lista
      */
     public Local createLocal(Local local) {
+        //define a id do local criado
+        local.setId(this.idAtual);
+        this.idAtual++;
         objeto.add(local);
-        return objeto.get(0);
+        return local;
     }
 
     /**

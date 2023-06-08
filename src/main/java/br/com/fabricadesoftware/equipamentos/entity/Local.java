@@ -1,8 +1,7 @@
 package br.com.fabricadesoftware.equipamentos.entity;
 
 public class Local {
-
-    private Integer id;
+    private int id;
     private String nome;
     private String observacao;
 
@@ -10,17 +9,17 @@ public class Local {
         
     }
 
-    public Local(Integer id, String nome, String observacao) {
+    public Local(int id, String nome, String observacao) {
         this.id = id;
         this.nome = nome;
         this.observacao = observacao;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 

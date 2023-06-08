@@ -30,7 +30,7 @@ fetch('http://localhost:8080/locais') // substitua com a URL da sua API
                             observacao: inputLocalObservacao.value
                         };
 
-                        fetch(`http://localhost:8080/locais/update/${local.id}`, {
+                        fetch(`http://localhost:8080/locais/${local.id}`, {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json'

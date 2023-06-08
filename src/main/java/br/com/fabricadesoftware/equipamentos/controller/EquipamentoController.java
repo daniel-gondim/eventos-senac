@@ -25,7 +25,7 @@ public class EquipamentoController {
         equipamentoService.deleteEquipamento(id);
     }
     @PutMapping("/equipamentos/{id}")
-    public void updateEquipamento(@RequestBody Equipamento equipamento) {
-        equipamentoService.updateEquipamento(equipamento);
+    public Equipamento updateEquipamento(@PathVariable int id, @RequestBody Equipamento equipamento) {
+        return equipamentoService.updateEquipamento(id, equipamento);
     }
 }

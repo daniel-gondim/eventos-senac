@@ -27,7 +27,7 @@ public class LocalController {
     public void deleteLocal(@PathVariable int id) {
         localService.deleteLocal(id);
     }
-    @PutMapping("/locais/update")
+    @PutMapping("/locais/{id}")
     public void updateLocais(@RequestBody Local local) {
         localService.updateLocal(local);
     }

@@ -8,14 +8,25 @@ import java.util.List;
 
 @Service
 public class EquipamentoService {
-    List<Equipamento> objeto = new ArrayList<>();
+    List<Equipamento> objeto;
+    int idAtual;
+
+    public EquipamentoService() {
+        this.objeto = new ArrayList<>();
+        this.idAtual = 1;
+    }
 
     /**
      * Método responsável por adicionar um equipamento na lista
      */
+
+
     public Equipamento createEquipamento(Equipamento equipamento) {
+        // lógica para setar o id do equipamento criado
+        equipamento.setId(this.idAtual);
+        this.idAtual++;
         objeto.add(equipamento);
-        return objeto.get(0);
+        return equipamento;
     }
 
     /**
@@ -40,12 +51,15 @@ public class EquipamentoService {
     /**
      * Método responsável por atualizar informações de um equipamento na lista
      */
-    public void updateEquipamento(Equipamento equipamento) {
-        for (int i = 0; i < objeto.size(); i++) {
-            Equipamento e = objeto.get(i);
-            if (equipamento.getId() == e.getId()) {
-                objeto.set(i, equipamento);
+    public Equipamento updateEquipamento(int id, Equipamento equipamento) {
+        //iterar sobre o objeto e procurar pelo id
+        for (Equipamento equipamentoExistente : objeto) {
+            if (equipamentoExistente.getId() == id) {
+                equipamentoExistente.setDescricao(equipamento.getDescricao());
+                equipamentoExistente.setObservacao(equipamento.getObservacao());
+                return equipamentoExistente;
             }
         }
+        return null;
     }
 }

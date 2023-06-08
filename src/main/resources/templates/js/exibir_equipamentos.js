@@ -9,10 +9,12 @@ fetch('http://localhost:8080/equipamentos')
 
             data.forEach(equipo => {
                     const listEquipo = document.createElement('li'); // cria linha para armazenar descrição e observação do equipamento
+                    listEquipo.className = "lista-equipamentos__item";
                     const equipoInfo = `${equipo.descricao} - ${equipo.observacao}`; // Concatenando descrição e observação
                     listEquipo.textContent = equipoInfo;
 
                     const editButton = document.createElement('button');
+                    editButton.className = "lista-equipamentos__item__botao";
                     editButton.textContent = 'Editar';
                     listEquipo.appendChild(editButton);
 
@@ -81,3 +83,4 @@ fetch('http://localhost:8080/equipamentos')
         // Trate erros de solicitação ou resposta da API
         console.error('Ocorreu um erro:', error);
     });
+    

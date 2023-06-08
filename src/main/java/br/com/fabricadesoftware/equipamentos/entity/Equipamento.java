@@ -5,6 +5,10 @@ public class Equipamento {
     private String descricao;
     private String observacao;
 
+    public Equipamento() {
+        
+    }
+
     public Equipamento(int id, String descricao, String observacao) {
         this.id = id;
         this.descricao = descricao;

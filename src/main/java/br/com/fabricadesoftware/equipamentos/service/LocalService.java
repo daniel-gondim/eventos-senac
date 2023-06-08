@@ -14,9 +14,6 @@ public class LocalService {
         this.listaLocais = new ArrayList<>();
         this.idAtual = 1;
     }
-
-
-
     /**
      * Método responsável por adicionar um local na lista
      */

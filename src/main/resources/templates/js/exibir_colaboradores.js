@@ -55,7 +55,6 @@ fetch('http://localhost:8080/colaboradores') // substitua com a URL da sua API
                                 console.error("Ocorreu um erro ao salvar as alterações.", error);
                             });
                     }
-                    // Atualiza a exibição erro esta aqui, falta o .value de input EquipoObservação
                     listColaborador.textContent = `${inputColaboradorNome.value} - ${inputColaboradorTipo.value}`;
                     editButton.textContent = 'Editar';
                 } else {

@@ -20,7 +20,6 @@ function salvar() {
                 console.log(res)
                 window.location.replace("http://localhost:8080/colaboradores")
                 window.location.href = "../templates/exibir_colaboradores.html";
-                //window.location.replace("../templates/exibir_equipamentos.html");
             } else {
                 console.log("Erro ao salvar o equipamento");
             }

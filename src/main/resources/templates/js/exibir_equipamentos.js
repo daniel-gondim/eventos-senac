@@ -43,7 +43,6 @@ fetch('http://localhost:8080/equipamentos')
                                             // Verifica se os campos esperados estão presentes no objeto JSON
                                             if (data.hasOwnProperty('descricao') && data.hasOwnProperty('observacao')) {
                                                 // 'data' contém os dados da resposta da API
-                                                console.log(data); // exibe os dados no console
                                                 console.log("Alterações salvas", data);
                                             } else {
                                                 console.error('A resposta da API não contem campos esperados')

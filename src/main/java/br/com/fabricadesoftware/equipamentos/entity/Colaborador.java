@@ -1,25 +1,21 @@
 package br.com.fabricadesoftware.equipamentos.entity;
 
 public class Colaborador {
-    private Integer id;
+    private int id;
     private String nome;
-    private TipoColaborador tipoColaborador;
+    private String tipoColaborador;
 
-    public Colaborador() {
-        
-    }
-
-    public Colaborador(Integer id, String nome, TipoColaborador tipoColaborador) {
+    public Colaborador(int id, String nome, String tipoColaborador) {
         this.id = id;
         this.nome = nome;
         this.tipoColaborador = tipoColaborador;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -31,11 +27,11 @@ public class Colaborador {
         this.nome = nome;
     }
 
-    public TipoColaborador getTipoColaborador() {
+    public String getTipoColaborador() {
         return tipoColaborador;
     }
 
-    public void setTipoColaborador(TipoColaborador tipoColaborador) {
+    public void setTipoColaborador(String tipoColaborador) {
         this.tipoColaborador = tipoColaborador;
     }
 }

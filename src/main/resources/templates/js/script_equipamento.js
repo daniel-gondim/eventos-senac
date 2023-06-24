@@ -20,7 +20,6 @@ function salvar() {
                 console.log(res)
                 window.location.replace("http://localhost:8080/equipamentos")
                 window.location.href = "../templates/exibir_equipamentos.html";
-                //window.location.replace("../templates/exibir_equipamentos.html");
             } else {
                 console.log("Erro ao salvar o equipamento");
             }
@@ -32,7 +31,7 @@ function salvar() {
 }
 function limpar() {
     InputDescricao.value = "",
-        InputObservacao.value = ""
+    InputObservacao.value = ""
 }
 formulario.addEventListener('submit', function(event) {
     event.preventDefault()

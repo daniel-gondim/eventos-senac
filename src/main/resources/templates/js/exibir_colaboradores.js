@@ -24,7 +24,7 @@ fetch('http://localhost:8080/colaboradores') // substitua com a URL da sua API
 
             editButton.addEventListener('click', () => {
                 if (isEditMode) {
-                    if (inputColaboradorNome.value !== colaborador.nome || inputColaboradorTipo.value !== colaborador.tipo) {
+                    if (colaborador.nome !== inputColaboradorNome.value || colaborador.tipo !== inputColaboradorTipo.value) {
                         const updateColaborador = {
                             nome: inputColaboradorNome.value,
                             tipo: inputColaboradorTipo.value

@@ -10,21 +10,16 @@ import java.util.List;
 @RestController
 @CrossOrigin("*")
 public class ColaboradorController {
-
     @Autowired
     private ColaboradorService colaboradorService;
-
-
     @PostMapping("/colaboradores/create")
     public Colaborador createColaborador(@RequestBody Colaborador colaborador){
         return colaboradorService.createColaborador(colaborador);
     }
-
     @GetMapping("/colaboradores")
     public List<Colaborador> findAllColaboradores() {
         return colaboradorService.findColaborador();
     }
-
     @DeleteMapping("/colaboradores/delete/id/{id}")
     public void deleteColaborador(@PathVariable int id) {
         colaboradorService.deleteColaborador(id);

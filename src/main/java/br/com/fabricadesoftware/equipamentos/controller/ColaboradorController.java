@@ -12,7 +12,7 @@ import java.util.List;
 public class ColaboradorController {
     @Autowired
     private ColaboradorService colaboradorService;
-    @PostMapping("/colaboradores/create")
+    @PostMapping("/colaboradores")
     public Colaborador createColaborador(@RequestBody Colaborador colaborador){
         return colaboradorService.createColaborador(colaborador);
     }
@@ -20,7 +20,7 @@ public class ColaboradorController {
     public List<Colaborador> findAllColaboradores() {
         return colaboradorService.findColaborador();
     }
-    @DeleteMapping("/colaboradores/delete/id/{id}")
+    @DeleteMapping("/colaboradores/{id}")
     public void deleteColaborador(@PathVariable int id) {
         colaboradorService.deleteColaborador(id);
     }

@@ -7,16 +7,49 @@ fetch('http://localhost:8080/colaboradores') // substitua com a URL da sua API
         // Exemplo de exibição em uma lista HTML
         const lista = document.getElementById('colaboradores-lista'); // substitua com o ID do elemento HTML onde você deseja exibir a lista
 
+        function excluirColaborador(id) {
+            fetch(`http://localhost:8080/colaboradores/${id}`, {
+                method: 'DELETE'
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        console.error("Erro ao excluir o equipamento");
+                    } else {
+                        console.log("Colaborador excluído com sucesso");
+                        // Remova o elemento da lista de equipamentos exibida na página
+                        const colaboradorExcluir = document.getElementById(`colaborador-${id}`);
+                        if (colaboradorExcluir) {
+                            colaboradorExcluir.remove();
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error("Ocorreu um erro ao excluir o equipamento:", error);
+                });
+        }
+
         data.forEach(colaborador => {
             const listColaborador = document.createElement('li'); // cria linha para armazenar
             listColaborador.className = "lista-colaboradores__item";
-             // Concatenando descrição e observação
+            listColaborador.id = `colaborador-${colaborador.id}`
+            // Concatenando descrição e observação
             listColaborador.textContent = `${colaborador.nome} - ${colaborador.tipo}`;
 
             const editButton = document.createElement('button');
             editButton.className = "lista-colaboradores__item__botao";
             editButton.textContent = 'Editar';
             listColaborador.appendChild(editButton);
+
+            const deleteButton = document.createElement('button');
+            deleteButton.className = "lista-colaboradores__item__botao";
+            deleteButton.textContent = 'Excluir';
+            listColaborador.appendChild(deleteButton);
+
+            deleteButton.addEventListener('click', () => {
+                // Chame a função de exclusão passando o ID do equipamento
+                excluirColaborador(colaborador.id);
+            });
+
 
             let isEditMode = false; //variável para controlar o modo de edição
             let inputColaboradorNome;

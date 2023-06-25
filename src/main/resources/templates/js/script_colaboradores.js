@@ -3,7 +3,7 @@ const InputNome = document.querySelector(".colaborador-nome");
 const InputTipo = document.querySelector(".colaborador-tipo");
 
 function salvar() {
-    fetch("http://localhost:8080/colaboradores/create",
+    fetch("http://localhost:8080/colaboradores",
         {
             headers: {
                 'Accept': 'application/json',

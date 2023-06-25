@@ -57,7 +57,7 @@ public class ColaboradorService {
         for (Colaborador colaboradorExistente: listaColaboradores) {
             if(colaboradorExistente.getId() == id) {
                 colaboradorExistente.setNome(colaborador.getNome());
-                colaboradorExistente.setTipoColaborador(colaborador.getTipoColaborador());
+                colaboradorExistente.setTipoColaborador((colaborador.getTipoColaborador()));
                 return colaboradorExistente;
             }
         }

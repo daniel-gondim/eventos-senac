@@ -7,9 +7,31 @@ fetch('http://localhost:8080/locais') // substitua com a URL da sua API
         // Exemplo de exibição em uma lista HTML
         const lista = document.getElementById('locais-lista'); // substitua com o ID do elemento HTML onde você deseja exibir a lista
 
+        function excluirLocal(id) {
+            fetch(`http://localhost:8080/locais/${id}`, {
+                method: 'DELETE'
+            })
+                .then(response => {
+                    if (response.ok) {
+                        console.log("Local excluído com sucesso");
+                        // Remova o elemento da lista de equipamentos exibida na página
+                        const localExcluir = document.getElementById(`local-${id}`);
+                        if (localExcluir) {
+                            localExcluir.remove();
+                        }
+                    } else {
+                        console.error("Erro ao excluir o local");
+                    }
+                })
+                .catch(error => {
+                    console.error("Ocorreu um erro ao excluir o local:", error);
+                });
+        }
+
         data.forEach(local => {
             const listLocal = document.createElement('li'); // cria linha para armazenar descrição e observação do equipamento
             listLocal.className = "lista-locais__item";
+            listLocal.id = `local-${local.id}`
             const localInfo = `${local.nome} - ${local.observacao}`; // nome e observação
             listLocal.textContent = localInfo;
 
@@ -17,6 +39,16 @@ fetch('http://localhost:8080/locais') // substitua com a URL da sua API
             editButton.className = "lista-locais__item__botao";
             editButton.textContent = 'Editar';
             listLocal.appendChild(editButton);
+
+            const deleteButton = document.createElement('button');
+            deleteButton.className = "lista-locais__item__botao";
+            deleteButton.textContent = 'Excluir';
+            listLocal.appendChild(deleteButton);
+
+            deleteButton.addEventListener('click', () => {
+                // Chame a função de exclusão passando o ID do local
+                excluirLocal(local.id);
+            });
 
             let isEditMode = false; //variável para controlar o modo de edição
             let inputLocalNome;

@@ -28,7 +28,6 @@ fetch('http://localhost:8080/equipamentos')
                     });
             }
 
-
             data.forEach(equipo => {
                     const listEquipo = document.createElement('li'); // cria linha para armazenar descrição e observação do equipamento
                     listEquipo.className = "lista-equipamentos__item";

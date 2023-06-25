@@ -19,11 +19,11 @@ public class LocalController {
         return localService.findLocal();
     }
 
-    @PostMapping("/locais/create")
+    @PostMapping("/locais")
     public Local createLocal(@RequestBody Local local){
         return localService.createLocal(local);
     }
-    @DeleteMapping("/locais/delete/id/{id}")
+    @DeleteMapping("/locais/{id}")
     public void deleteLocal(@PathVariable int id) {
         localService.deleteLocal(id);
     }

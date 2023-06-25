@@ -3,7 +3,7 @@ const InputNome = document.querySelector(".local-nome");
 const InputObservacao = document.querySelector(".local-observacao");
 
 function salvar() {
-    fetch("http://localhost:8080/locais/create",
+    fetch("http://localhost:8080/locais",
         {
             headers: {
                 'Accept': 'application/json',

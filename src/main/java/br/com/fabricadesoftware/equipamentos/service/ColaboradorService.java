@@ -51,6 +51,8 @@ public class ColaboradorService {
     /**
      * Método responsável por atualizar informações de um colaborador
      */
+
+    // alterar o tipo do colaborador para String colaborador
     public Colaborador updateColaborador(int id, Colaborador colaborador) {
         for (Colaborador colaboradorExistente: listaColaboradores) {
             if(colaboradorExistente.getId() == id) {

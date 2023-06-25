@@ -10,8 +10,8 @@ fetch('http://localhost:8080/colaboradores') // substitua com a URL da sua API
         data.forEach(colaborador => {
             const listColaborador = document.createElement('li'); // cria linha para armazenar
             listColaborador.className = "lista-colaboradores__item";
-            const colaboradorInfo = `${colaborador.nome} - ${colaborador.tipo}`; // Concatenando descrição e observação
-            listColaborador.textContent = colaboradorInfo;
+             // Concatenando descrição e observação
+            listColaborador.textContent = `${colaborador.nome} - ${colaborador.tipo}`;
 
             const editButton = document.createElement('button');
             editButton.className = "lista-colaboradores__item__botao";

@@ -7,9 +7,32 @@ fetch('http://localhost:8080/equipamentos')
             // Exemplo de exibição em uma lista HTML
             const lista = document.getElementById('equipamentos-lista'); // substitua com o ID do elemento HTML onde você deseja exibir a lista
 
+            function excluirEquipamento(id) {
+                fetch(`http://localhost:8080/equipamentos/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            console.log("Equipamento excluído com sucesso");
+                            // Remova o elemento da lista de equipamentos exibida na página
+                            const elementoExcluir = document.getElementById(`equipamento-${id}`);
+                            if (elementoExcluir) {
+                                elementoExcluir.remove();
+                            }
+                        } else {
+                            console.error("Erro ao excluir o equipamento");
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Ocorreu um erro ao excluir o equipamento:", error);
+                    });
+            }
+
+
             data.forEach(equipo => {
                     const listEquipo = document.createElement('li'); // cria linha para armazenar descrição e observação do equipamento
                     listEquipo.className = "lista-equipamentos__item";
+                    listEquipo.id = `equipamento-${equipo.id}`
                     const equipoInfo = `${equipo.descricao} - ${equipo.observacao}`; // Concatenando descrição e observação
                     listEquipo.textContent = equipoInfo;
 
@@ -17,6 +40,17 @@ fetch('http://localhost:8080/equipamentos')
                     editButton.className = "lista-equipamentos__item__botao";
                     editButton.textContent = 'Editar';
                     listEquipo.appendChild(editButton);
+
+                    const deleteButton = document.createElement('button');
+                    deleteButton.className = "lista-equipamentos__item__botao";
+                    deleteButton.textContent = 'Excluir';
+                    listEquipo.appendChild(deleteButton);
+
+                    deleteButton.addEventListener('click', () => {
+                        // Chame a função de exclusão passando o ID do equipamento
+                        excluirEquipamento(equipo.id);
+                    });
+
 
                     let isEditMode = false; //variável para controlar o modo de edição
                     let inputEquipoDescricao;
@@ -82,4 +116,3 @@ fetch('http://localhost:8080/equipamentos')
         // Trate erros de solicitação ou resposta da API
         console.error('Ocorreu um erro:', error);
     });
-    

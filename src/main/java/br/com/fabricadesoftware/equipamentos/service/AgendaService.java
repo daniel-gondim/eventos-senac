@@ -39,11 +39,7 @@ public class AgendaService {
      * Método responsável por deletar uma agenda na lista
      */
     public void deleteAgenda(int id) {
-        for (Agenda agenda : listaAgendas) {
-            if (agenda.getId() == (id)) {
-                listaAgendas.remove(agenda);
-            }
-        }
+        listaAgendas.removeIf(agenda -> agenda.getId() == (id));
     }
 
     /**

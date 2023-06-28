@@ -2,6 +2,7 @@ package br.com.fabricadesoftware.equipamentos.controller;
 
 import br.com.fabricadesoftware.equipamentos.entity.Agenda;
 import br.com.fabricadesoftware.equipamentos.service.AgendaService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
 @RestController
 @CrossOrigin("*")
 public class AgendaController {
-
+    @Autowired
     private AgendaService agendaService;
 
     @GetMapping("/agendas")

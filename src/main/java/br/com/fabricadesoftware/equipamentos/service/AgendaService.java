@@ -1,17 +1,18 @@
 package br.com.fabricadesoftware.equipamentos.service;
 
 import br.com.fabricadesoftware.equipamentos.entity.Agenda;
-import br.com.fabricadesoftware.equipamentos.entity.Equipamento;
+import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
-
+@Service
 public class AgendaService {
 
     List<Agenda> listaAgendas;
     int idAtual;
 
-    public AgendaService(List<Agenda> listaAgendas, int idAtual) {
-        this.listaAgendas = listaAgendas;
+    public AgendaService() {
+        this.listaAgendas = new ArrayList<>();
         this.idAtual = 1;
     }
 
@@ -39,9 +40,9 @@ public class AgendaService {
      */
     public void deleteAgenda(int id) {
         for (Agenda agenda : listaAgendas) {
-            if (agenda.getId() == (id))
+            if (agenda.getId() == (id)) {
                 listaAgendas.remove(agenda);
-            break;
+            }
         }
     }
 

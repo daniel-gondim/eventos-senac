@@ -42,7 +42,6 @@ public class EquipamentoService {
         for (Equipamento equipamento : objeto) {
             if (equipamento.getId() == (id))
                 objeto.remove(equipamento);
-            break;
         }
     }
 

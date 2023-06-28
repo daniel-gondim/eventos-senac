@@ -3,9 +3,9 @@ const InputTitulo = document.querySelector(".titulo");
 const InputDataInicio = document.querySelector(".dataInicio");
 const InputDataTermino = document.querySelector(".dataTermino");
 const InputObservacao = document.querySelector(".observacao");
-const InputColaborador = document.querySelector(".colaborador");
-const InputLocal = document.querySelector(".local");
-const InputEquipamento = document.querySelector(".equipamento");
+// const InputColaborador = document.querySelector(".colaborador");
+// const InputLocal = document.querySelector(".local");
+// const InputEquipamento = document.querySelector(".equipamento");
 
 function salvar() {
     fetch("http://localhost:8080/agendas",
@@ -44,10 +44,10 @@ function limpar() {
     InputTitulo.value = "",
     InputDataInicio.value = "",
     InputDataTermino.value = "",
-    InputObservacao.value = "",
-    InputColaborador.value = "",
-    InputLocal.value = "",
-    InputEquipamento.value = ""
+    InputObservacao.value = ""
+    // InputColaborador.value = "",
+    // InputLocal.value = "",
+    // InputEquipamento.value = ""
 }
 
 formularioAgenda.addEventListener('submit', function(event) {

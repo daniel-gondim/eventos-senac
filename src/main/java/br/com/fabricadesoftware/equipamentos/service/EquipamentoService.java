@@ -39,10 +39,7 @@ public class EquipamentoService {
      * Método responsável por deletar um equipamento na lista
      */
     public void deleteEquipamento(int id) {
-        for (Equipamento equipamento : objeto) {
-            if (equipamento.getId() == (id))
-                objeto.remove(equipamento);
-        }
+        objeto.removeIf(equipamento -> equipamento.getId() == (id));
     }
 
     /**

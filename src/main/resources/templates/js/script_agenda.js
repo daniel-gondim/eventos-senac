@@ -19,7 +19,7 @@ function salvar() {
                 titulo: InputTitulo.value,
                 dataInicio: InputDataInicio.value,
                 dataTermino: InputDataTermino.value,
-                observacao: InputObservacao.value,
+                observacao: InputObservacao.value
                 // colaborador: InputColaborador.value,
                 // local: InputLocal.value,
                 // equipamento: InputEquipamento.value
@@ -29,7 +29,7 @@ function salvar() {
             if (res.ok) {
                 console.log(res);
                 window.location.replace("http://localhost:8080/agendas");
-                window.location.href = "path do arquivo exibir agenda";
+                window.location.href = "../templates/home.html";
             } else {
                 console.log("Erro ao salvar a agenda.")
             }

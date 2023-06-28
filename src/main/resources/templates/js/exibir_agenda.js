@@ -1,9 +1,9 @@
-etch('http://localhost:8080/agendas')
+fetch('http://localhost:8080/agendas')
     .then(response => response.json()) // converte a resposta para JSON
     .then(data => {
             // 'data' contém os dados da resposta da API
             console.log(data); // exibe os dados no console
-            const lista = document.getElementById('equipamentos-lista'); // substitua com o ID do elemento HTML onde você deseja exibir a lista
+            const lista = document.getElementById('agendas-lista'); // substitua com o ID do elemento HTML onde você deseja exibir a lista
 
             function excluirAgenda(id) {
                 fetch(`http://localhost:8080/agendas/${id}`, {
@@ -28,7 +28,7 @@ etch('http://localhost:8080/agendas')
 
             data.forEach(agenda => {
                     const listAgenda = document.createElement('li'); // cria linha para armazenar descrição e observação do equipamento
-                    listAgenda.className = "lista-equipamentos__item";
+                    listAgenda.className = "lista-agendas__item";
                     listAgenda.id = `agenda-${agenda.id}`
                     const agendaInfo = `${agenda.titulo} - ${agenda.dataInicio} - ${agenda.dataTermino} ${agenda.observacao} -`; // Concatenando descrição e observação
                     listAgenda.textContent = agendaInfo;
@@ -65,7 +65,7 @@ etch('http://localhost:8080/agendas')
                                     observacao: inputAgendaObservacao.value
                                 };
 
-                                fetch(`http://localhost:8080/equipamentos/${agenda.id}`, {
+                                fetch(`http://localhost:8080/agendas/${agenda.id}`, {
                                     method: 'PUT',
                                     headers: {
                                         'Content-Type': 'application/json'

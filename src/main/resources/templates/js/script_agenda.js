@@ -1,8 +1,8 @@
 const formularioAgenda = document.getElementById("form-container");
-const InputTitulo = document.querySelector(".titulo");
-const InputDataInicio = document.querySelector(".dataInicio");
-const InputDataTermino = document.querySelector(".dataTermino");
-const InputObservacao = document.querySelector(".observacao");
+const InputTitulo = document.querySelector(".agenda-titulo");
+const InputDataInicio = document.querySelector(".agenda-dataInicio");
+const InputDataTermino = document.querySelector(".agenda-dataTermino");
+const InputObservacao = document.querySelector(".agenda-observacao");
 // const InputColaborador = document.querySelector(".colaborador");
 // const InputLocal = document.querySelector(".local");
 // const InputEquipamento = document.querySelector(".equipamento");

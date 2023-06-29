@@ -16,6 +16,10 @@ public class Agenda {
     private Local local;
     private Equipamento equipamento;
 
+    public Agenda() {
+        
+    }
+
     public Agenda(int id, String titulo, Date dataInicio, Date dataTermino, String observacao, Colaborador colaborador, Local local, Equipamento equipamento) {
         this.id = id;
         this.titulo = titulo;

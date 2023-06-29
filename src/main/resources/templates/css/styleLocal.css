@@ -17,6 +17,7 @@ body {
 
 .nav-link {
     color: var(--branco);
+    width: fit-content;
 }
 
 .material-symbols-outlined {

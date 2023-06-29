@@ -18,7 +18,8 @@ body {
 }
 
 .nav-link {
-    color: var(--branco) ;
+    color: var(--branco);
+    width: fit-content;
 }
 
 .material-symbols-outlined {
@@ -42,6 +43,48 @@ body {
     margin-left: 1.3em;
     padding: 0.8em;
     border-radius: 1em;
+}
+
+#agendas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: 1em;
+    padding: 0;
+}
+
+.lista-agendas__item {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    color: var(--branco);
+    background-color: var(--azul-escuro);
+    padding: 1.5em;
+    gap: 1.2em;
+    border-radius: 2em;
+    margin: 0;
+    width: 30em;
+}
+
+.lista-agendas__item__titulo {
+    font-size: 2em;
+}
+
+.lista-agendas__item__dataInicio {
+    font-size: 1.25em;
+}
+
+.lista-agendas__item__dataTermino {
+    font-size: 1.25em;
+}
+
+.lista-agendas__item__observacao {
+    font-size: 1.25em;
+}
+
+.btn-primary {
+    background-color: var(--laranja);
+    border-color: var(--laranja);
 }
 
 @media screen and (max-width: 570px) {

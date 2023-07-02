@@ -87,6 +87,11 @@ function criarElementosAgenda(agenda) {
   agendaObservacao.textContent = `Observação: ${agenda.observacao}`;
   listAgenda.appendChild(agendaObservacao);
 
+  const agendaEquipamento = document.createElement("h3");
+  agendaEquipamento.className = "lista-agendas__item__observacao";
+  agendaEquipamento.textContent = `Equipamento: ${agenda.equipamento}`;
+  listAgenda.appendChild(agendaEquipamento);
+
   const editButton = document.createElement("button");
   editButton.className = "lista-agendas__item__botaoEditar btn btn-primary";
   editButton.textContent = "Editar";

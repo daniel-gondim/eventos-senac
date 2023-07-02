@@ -11,6 +11,7 @@
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <link rel="icon" href="./img/logoTitleSenac.png" type="image/x-icon">
     <title>Cadastro de Agenda</title>
+    <script src="js/carregarEquipamento.js" defer></script>
     <script src="js/script_agenda.js" defer></script>
 </head>
 <body>
@@ -75,6 +76,7 @@
 
         <div class="equipamentos-dropdown">
             <label for="equipamentos">Equipamentos que serão utilizados: </label>
+<!--            o elemento responsável pelo dropdown é o select-->
             <select id="equipamentos" class="equipamento-select">
                 <option value="0">Escolha um equipamento</option>
             </select>
@@ -83,45 +85,6 @@
     </form>
 </div>
 
-<script>
-    // Obtém a referência para o campo de dropdown de equipamentos
-    const equipamentosDropdown = document.querySelector(".equipamentos-dropdown");
-
-    function carregarEquipamentos() {
-        fetch("http://localhost:8080/equipamentos")
-            .then(function (response) {
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    throw new Error("Erro ao carregar os equipamentos.");
-                }
-            })
-            .then(function (data) {
-                // Limpa as opções existentes
-                equipamentosDropdown.innerHTML = "";
-
-                // Adiciona a opção padrão
-                const opcaoPadrao = document.createElement("option");
-                opcaoPadrao.value = "0";
-                opcaoPadrao.textContent = "Escolha um equipamento";
-                equipamentosDropdown.appendChild(opcaoPadrao);
-
-                // Adiciona as opções dos equipamentos retornados pelo servidor
-                data.forEach(function (equipamento) {
-                    const option = document.createElement("option");
-                    option.value = equipamento.id; // Supondo que o equipamento tenha um ID
-                    option.textContent = equipamento.nome; // Supondo que o equipamento tenha um nome
-                    equipamentosDropdown.appendChild(option);
-                });
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-    }
-
-    // Chama a função para carregar os equipamentos quando a página é carregada
-    window.addEventListener("load", carregarEquipamentos);
-</script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

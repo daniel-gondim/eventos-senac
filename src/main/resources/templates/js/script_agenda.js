@@ -5,7 +5,7 @@ const InputDataTermino = document.querySelector(".agenda-dataTermino");
 const InputObservacao = document.querySelector(".agenda-observacao");
 // const InputColaborador = document.querySelector(".colaborador");
 // const InputLocal = document.querySelector(".local");
-// const InputEquipamento = document.querySelector(".equipamento");
+const InputEquipamento = document.querySelector(".equipamentos-dropdown");
 
 function salvar() {
     fetch("http://localhost:8080/agendas",
@@ -19,10 +19,10 @@ function salvar() {
                 titulo: InputTitulo.value,
                 dataInicio: InputDataInicio.value,
                 dataTermino: InputDataTermino.value,
-                observacao: InputObservacao.value
+                observacao: InputObservacao.value,
                 // colaborador: InputColaborador.value,
                 // local: InputLocal.value,
-                // equipamento: InputEquipamento.value
+                equipamento: InputEquipamento.value
             })
         })
         .then(function (res) {
@@ -44,10 +44,10 @@ function limpar() {
     InputTitulo.value = "",
     InputDataInicio.value = "",
     InputDataTermino.value = "",
-    InputObservacao.value = ""
+    InputObservacao.value = "",
     // InputColaborador.value = "",
     // InputLocal.value = "",
-    // InputEquipamento.value = ""
+    InputEquipamento.value = ""
 }
 
 formularioAgenda.addEventListener('submit', function(event) {

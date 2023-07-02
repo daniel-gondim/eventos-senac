@@ -88,8 +88,8 @@ function criarElementosAgenda(agenda) {
   listAgenda.appendChild(agendaObservacao);
 
   const agendaEquipamento = document.createElement("h3");
-  agendaEquipamento.className = "lista-agendas__item__observacao";
-  agendaEquipamento.textContent = `Equipamento: ${agenda.equipamento}`;
+  agendaEquipamento.className = "lista-agendas__item__equipamento";
+  agendaEquipamento.textContent = `Equipamento: ${agenda.equipamento || ""}`;
   listAgenda.appendChild(agendaEquipamento);
 
   const editButton = document.createElement("button");
@@ -113,6 +113,7 @@ function criarElementosAgenda(agenda) {
   let inputAgendaDataInicio;
   let inputAgendaDataTermino;
   let inputAgendaObservacao;
+  let inputAgendaEquipamento;
 
   editButton.addEventListener("click", () => {
     // Alterne o modo de edição
@@ -152,6 +153,7 @@ function criarElementosAgenda(agenda) {
         dataInicio: inputAgendaDataInicio.value,
         dataTermino: inputAgendaDataTermino.value,
         observacao: inputAgendaObservacao.value,
+        equipamento: inputAgendaEquipamento.value
       };
 
       fetch(`http://localhost:8080/agendas/${agenda.id}`, {
@@ -176,6 +178,7 @@ function criarElementosAgenda(agenda) {
               agenda.dataInicio = data.dataInicio;
               agenda.dataTermino = data.dataTermino;
               agenda.observacao = data.observacao;
+              agenda.equipamento = data.equipamento;
               // Renderize a agenda com os dados atualizados
               renderizarAgenda(data);
             } else {

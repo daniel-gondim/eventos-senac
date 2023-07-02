@@ -54,4 +54,9 @@ formularioAgenda.addEventListener('submit', function(event) {
     event.preventDefault()
     salvar()
     limpar();
+})
+
+InputEquipamento.addEventListener('change', function(event) {
+    InputEquipamento.value = event.target.value;
 });
+

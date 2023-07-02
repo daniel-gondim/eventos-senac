@@ -1,5 +1,5 @@
 // Obtém a referência para o campo de dropdown de equipamentos
-const equipamentosDropdown = document.querySelector(".equipamentos-dropdown");
+const equipamentosDropdown = document.querySelector(".equipamento-select");
 
 function carregarEquipamentos() {
     fetch("http://localhost:8080/equipamentos")

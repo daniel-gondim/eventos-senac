@@ -5,7 +5,7 @@ const InputDataTermino = document.querySelector(".agenda-dataTermino");
 const InputObservacao = document.querySelector(".agenda-observacao");
 // const InputColaborador = document.querySelector(".colaborador");
 // const InputLocal = document.querySelector(".local");
-const InputEquipamento = document.querySelector(".equipamentos-dropdown");
+const InputEquipamento = document.querySelector(".equipamento-select");
 
 function salvar() {
     fetch("http://localhost:8080/agendas",
@@ -41,10 +41,10 @@ function salvar() {
 }
 
 function limpar() {
-    InputTitulo.value = "",
-    InputDataInicio.value = "",
-    InputDataTermino.value = "",
-    InputObservacao.value = "",
+    InputTitulo.value = ""
+    InputDataInicio.value = ""
+    InputDataTermino.value = ""
+    InputObservacao.value = ""
     // InputColaborador.value = "",
     // InputLocal.value = "",
     InputEquipamento.value = ""

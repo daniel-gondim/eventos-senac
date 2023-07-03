@@ -152,8 +152,8 @@ function criarElementosAgenda(agenda) {
         titulo: inputAgendaTitulo.value,
         dataInicio: inputAgendaDataInicio.value,
         dataTermino: inputAgendaDataTermino.value,
-        observacao: inputAgendaObservacao.value,
-        equipamento: inputAgendaEquipamento.value
+        observacao: inputAgendaObservacao.value
+        // equipamento: inputAgendaEquipamento.value
       };
 
       fetch(`http://localhost:8080/agendas/${agenda.id}`, {

@@ -22,7 +22,7 @@ function salvar() {
                 observacao: InputObservacao.value,
                 // colaborador: InputColaborador.value,
                 // local: InputLocal.value,
-                equipamento: InputEquipamento.value
+                // equipamento: InputEquipamento.value
             })
         })
         .then(function (res) {

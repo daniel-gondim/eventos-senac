@@ -20,6 +20,17 @@ public class Agenda {
         
     }
 
+    /**
+     * Descrição do método.
+     *
+     * @param id id da agenda.
+     * @param titulo título da agenda.
+     * @param dataInicio data de início da agenda
+     * @param colaborador colaborador que participará da agenda
+     * @param dataTermino data de término da agenda
+     * @param observacao
+     * @return Descrição do valor de retorno
+     */
     public Agenda(int id, String titulo, Date dataInicio, Date dataTermino, String observacao, Colaborador colaborador, Local local, Equipamento equipamento) {
         this.id = id;
         this.titulo = titulo;
